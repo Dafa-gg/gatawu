@@ -1,35 +1,45 @@
-.bunga {
-  width: 100px;
-  height: 100px;
-  background-color: pink;
-  border-radius: 50%;
+<div class="bunga-mawar"></div>
+.bunga-mawar {
+  width: 200px;
+  height: 200px;
   position: relative;
 }
 
 .kelopak {
-  width: 50px;
-  height: 50px;
-  background-color: lightpink;
   position: absolute;
+  background-color: #F00; /* Merah */
   border-radius: 50%;
+  animation: mekar 2s infinite alternate;
 }
 
 .kelopak:nth-child(1) {
-  top: 25px;
-  left: 0;
+  width: 80px;
+  height: 80px;
+  top: 20px;
+  left: 60px;
 }
 
 .kelopak:nth-child(2) {
-  top: 0;
-  left: 25px;
+  width: 100px;
+  height: 100px;
+  top: 40px;
+  left: 40px;
 }
 
 .kelopak:nth-child(3) {
-  top: 25px;
-  right: 0;
+  width: 60px;
+  height: 60px;
+  top: 60px;
+  left: 60px;
 }
 
-.kelopak:nth-child(4) {
-  bottom: 0;
-  left: 25px;
+/* Kelopak lainnya, atur posisi sesuai keinginan */
+
+@keyframes mekar {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
